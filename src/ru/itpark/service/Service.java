@@ -10,13 +10,13 @@ import java.util.List;
 public class Service {
     private Repository repository;
 
+
     public Service(Repository repository) {
         this.repository = repository;
     }
 
-    // раньше сами собирали в сервисе объект, сейчас же скажем, что это должен делать кто-то другой
+
     public void add(Product product) {
-        // TODO: бизнес-проверки, валидация
         repository.add(product);
     }
 
@@ -30,21 +30,16 @@ public class Service {
         return result;
     }
 
-    public List
+        public List<Product>
     getAllNamesProduct(List<Product> products) {
 
-        List
-                result = new ArrayList<>();
-
+        List<Product> result = new ArrayList<>();
         for (Product product : products) {
             if (product.getName().contains("LG")) {
                 result.add(product);
             }
         }
         return result;
-
-
     }
-
 
 }

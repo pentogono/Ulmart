@@ -28,7 +28,8 @@ public class Main {
 
 
         System.out.println(service.getSorted(new PriceComparator()));
-        System.out.println(service.getAllNamesProduct());
+        System.out.println(service.getAllNamesProduct(service.getSorted(new PriceComparator())));
+
 
     }
 }
